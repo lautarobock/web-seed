@@ -14,7 +14,9 @@
       })
       .state('main.form', {
           url:'form',
-          template: '<span>HI FORM!</span>'
+          templateUrl: 'app/form1/form1.html',
+          controller: 'Form1Controller',
+          controllerAs: 'vm'
       })
       .state('main.form2', {
           url:'form2',

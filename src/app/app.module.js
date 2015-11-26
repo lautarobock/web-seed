@@ -4,6 +4,7 @@
   angular
     .module('app', [
         'app.comments.navbar',
+        'app.form1',
         'ngplus',
         'ngAnimate',
         'ngSanitize',
