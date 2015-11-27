@@ -1,0 +1,19 @@
+<div class="sidebar">
+    <div class="sidebar-filler"></div>
+    <div class="sidebar-dropdown"><a href="">Menu</a></div>
+    <div class="sidebar-inner">
+        <div class="sidebar-widget"></div>
+        <ul class="navi">
+            <li class="nlightblue fade-selection-animation" ui-sref-active="current" as-parent ng-repeat="item in vm.items" >
+                <a ng-if="item.state" ui-sref="{{item.state}}">
+                    <i ng-if="item.icon" ng-class="item.icon" style="margin-left:{{item.indent}}px"></i>
+                    {{item.name}}
+                </a>
+                <span ng-if="!item.state">
+                    <i ng-if="item.icon" ng-class="item.icon" style="margin-left:{{item.indent}}px"></i>
+                    {{item.name}}
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>

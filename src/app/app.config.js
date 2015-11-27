@@ -6,7 +6,7 @@
     .config(config);
 
   /** @ngInject */
-  function config($logProvider, toastrConfig) {
+  function config($logProvider, toastrConfig, navbarConfigProvider) {
     // Enable log
     $logProvider.debugEnabled(true);
 
@@ -16,6 +16,16 @@
     toastrConfig.positionClass = 'toast-top-right';
     toastrConfig.preventDuplicates = true;
     toastrConfig.progressBar = true;
+
+    navbarConfigProvider.sidebar([{
+        name: 'Form 1',
+        state: 'main.form',
+        icon: 'fa fa-file-o'
+    }, {
+        name: 'Form 2',
+        state: 'main.form2',
+        icon: 'fa fa-gears'
+    }]);
   }
 
 })();
